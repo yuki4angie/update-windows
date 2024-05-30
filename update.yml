@@ -1,3 +1,4 @@
+---
 - name: Run Updates on Terminal Servers then wait 7 mins
   hosts: "{{group_name}}"
   tasks:
