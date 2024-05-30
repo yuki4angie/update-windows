@@ -9,7 +9,7 @@
         - SecurityUpdates
         - Updates
       accept_list:
-        - KB4093120
+        - KB890830
     state: installed
     reboot: yes
     reboot_timeout: 420
