@@ -5,13 +5,13 @@
     - name: Update windows servers 
       ansible.windows.win_updates:
         category_names:
-          - Application
-          - CriticalUpdates
-          - DefinitionUpdates
-          - SecurityUpdates
-          - Updates
+        - Application
+        - CriticalUpdates
+        - DefinitionUpdates
+        - SecurityUpdates
+        - Updates
         accept_list:
-          - KB890830
+        - KB890830
       state: installed
       reboot: yes
       reboot_timeout: 420
