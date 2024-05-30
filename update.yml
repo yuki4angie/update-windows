@@ -1,16 +1,16 @@
 ---
-- name: Run Updates on Terminal Servers then wait 7 mins
-  hosts: "{{group_name}}"
+- hosts: "{{group_name}}"
   tasks:
-    ansible.windows.win_updates:
-      category_names:
-        - Application
-        - CriticalUpdates
-        - DefinitionUpdates
-        - SecurityUpdates
-        - Updates
-      accept_list:
-        - KB890830
-    state: installed
-    reboot: yes
-    reboot_timeout: 420
+    - name: Update windows servers 
+      ansible.windows.win_updates:
+        category_names:
+          - Application
+          - CriticalUpdates
+          - DefinitionUpdates
+          - SecurityUpdates
+          - Updates
+        accept_list:
+          - KB890830
+      state: installed
+      reboot: yes
+      reboot_timeout: 420
