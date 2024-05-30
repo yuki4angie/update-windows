@@ -12,6 +12,6 @@
         - Updates
         accept_list:
         - KB890830
-      state: installed
-      reboot: yes
-      reboot_timeout: 420
+        state: installed
+        reboot: yes
+        reboot_timeout: 420
