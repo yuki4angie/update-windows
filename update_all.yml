@@ -1,0 +1,10 @@
+---
+- name: Update
+  hosts: "{{group_name}}"
+  tasks:
+    - name: Update windows servers 
+      ansible.windows.win_updates:
+        category_names: '*'
+        state: installed
+        reboot: true
+        reboot_timeout: 420
