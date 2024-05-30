@@ -1,6 +1,6 @@
 ---
 - name: Run Updates on Terminal Servers then wait 7 mins
-  hosts: "{{group_name}}"
+  hosts: {{group_name}}
   tasks:
     ansible.windows.win_updates:
       category_names:
