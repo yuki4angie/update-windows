@@ -16,5 +16,7 @@
     - name: Install all security updates with automatic reboots
       ansible.windows.win_updates:
         category_names:
-        - SecurityUpdates
+         - Microsoft Defender Antivirus
+  #      - SecurityUpdates
         reboot: true
+        reboot_timeout: 1800
