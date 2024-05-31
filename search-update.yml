@@ -14,11 +14,12 @@
     - name: Install all security updates with automatic reboots
       ansible.windows.win_updates:
         category_names: '*'
-        reboot: true
-        reboot_timeout: 1800
         reject_list:
         - KB5037782
         - KB5034439
+        reboot: true
+        reboot_timeout: 1800
+
 
   #  - name: Example from an Ansible Playbook
   #    ansible.builtin.ping:
