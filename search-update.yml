@@ -7,3 +7,8 @@
         category_names: SecurityUpdates
         state: searched
         log_path: C:\ansible_wu.txt
+      register: update_info
+
+  - name: print updates
+    debug: 
+      msg: vm_info
