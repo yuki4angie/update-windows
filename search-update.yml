@@ -9,20 +9,16 @@
       ansible.windows.win_updates:
         category_names: SecurityUpdates
         state: searched
-        log_path: C:\ansible_wu.txt
       register: update_info
-
-    - name: print updates
-      debug: 
-        msg: "{{update_info}}"
 
     - name: Install all security updates with automatic reboots
       ansible.windows.win_updates:
-        category_names:
-         - Microsoft Defender Antivirus
-  #      - SecurityUpdates
+        category_names: '*'
         reboot: true
         reboot_timeout: 1800
+        reject_list:
+        - KB5037782
+        - KB5034439
 
   #  - name: Example from an Ansible Playbook
   #    ansible.builtin.ping:
