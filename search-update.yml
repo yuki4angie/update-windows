@@ -11,4 +11,4 @@
 
     - name: print updates
       debug: 
-        msg: vm_info
+        msg: update_info
