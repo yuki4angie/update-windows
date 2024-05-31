@@ -2,6 +2,9 @@
 - name: Update
   hosts: "{{group_name}}"
   tasks:
+    - name: Example from an Ansible Playbook
+      ansible.builtin.ping:
+      
     - name: Search-only, return list of found updates (if any), log to C:\ansible_wu.txt
       ansible.windows.win_updates:
         category_names: SecurityUpdates
@@ -20,3 +23,6 @@
   #      - SecurityUpdates
         reboot: true
         reboot_timeout: 1800
+
+    - name: Example from an Ansible Playbook
+      ansible.builtin.ping:
